@@ -33,10 +33,10 @@ function addVideoControls() {
         }
     })
 
-    createVideoControlButtons(videoDiv)
+    createVideoControlButtons(videoDiv, changeMargin)
 }
 
-function createVideoControlButtons(videoDiv) {
+function createVideoControlButtons(videoDiv, changeMarin) {
     const videoContainer = document.querySelector('.video-container')
     
     let myExpandVideoControl = document.createElement('div')
@@ -80,6 +80,9 @@ function createVideoControlButtons(videoDiv) {
             console.log('expand video')
             videoDiv.style.marginLeft = '-100px'
             videoDiv.style.marginRight = '-100px'
+            changeMargin.style.marginLeft = '0'
+            changeMargin.style.marginRight = '0'
+            changeMargin.style.padding = '40px 0 40px 0'
             } else if (event.target.id == 'shrink-video') {
             console.log('shrink video')
             videoDiv.style.marginLeft = '0'
