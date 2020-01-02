@@ -19,24 +19,24 @@ function addVideoControls() {
         }
     })
 
-    const changeMargin = document.querySelector('.content-container')
-    document.addEventListener('keydown', (event) => {
-        console.log(event.key);
-        if (event.key === 'e') {
-            console.log('Expand Left')
-            changeMargin.style.marginLeft = '0'
-            changeMargin.style.padding = '40px 0 40px 0'
-        } else if (event.key === 'c') {
-            console.log('Expand Right')
-            changeMargin.style.marginRight = '0'
-            
-        }
-    })
+    let navLinkLeft = document.querySelector('.guide-nav-left')
+    navLinkLeft.style.top = '78px'
+    navLinkLeft.style.left = '12px'
 
-    createVideoControlButtons(videoDiv, changeMargin)
+
+    let navLinkRight = document.querySelector('.guide-nav-right')
+    navLinkRight.style.top = '78px'
+    navLinkRight.style.right = '12px'
+
+    let completed = document.querySelector('.mark-completed')
+    completed.style.top = '78px'
+    completed.style.right = '110px'
+    
+
+    createVideoControlButtons(videoDiv)
 }
 
-function createVideoControlButtons(videoDiv, changeMarin) {
+function createVideoControlButtons(videoDiv) {
     const videoContainer = document.querySelector('.video-container')
     
     let myExpandVideoControl = document.createElement('div')
@@ -60,7 +60,7 @@ function createVideoControlButtons(videoDiv, changeMarin) {
     
     myExpandVideoControl.style.position = "fixed"
     myExpandVideoControl.style.top = "70px"
-    myExpandVideoControl.style.left = "250px"
+    myExpandVideoControl.style.left = "340px"
     
     let cssStyle = `
         padding: 10px;
@@ -80,9 +80,6 @@ function createVideoControlButtons(videoDiv, changeMarin) {
             console.log('expand video')
             videoDiv.style.marginLeft = '-100px'
             videoDiv.style.marginRight = '-100px'
-            changeMargin.style.marginLeft = '0'
-            changeMargin.style.marginRight = '0'
-            changeMargin.style.padding = '40px 0 40px 0'
             } else if (event.target.id == 'shrink-video') {
             console.log('shrink video')
             videoDiv.style.marginLeft = '0'

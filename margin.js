@@ -48,7 +48,7 @@ function createMarginControlButtons(expandDiv) {
     
     myExpandDivControl.style.position = "fixed"
     myExpandDivControl.style.top = "70px"
-    myExpandDivControl.style.left = "525px"
+    myExpandDivControl.style.left = "615px"
     
     let cssBtnStyle = `
         padding: 10px;
