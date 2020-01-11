@@ -75,4 +75,14 @@ function createMarginControlButtons(expandDiv) {
             }
         } )
     })
+    
+    let navLabelLeft = document.querySelector('.guide-nav-left .nav-label')
+    navLabelLeft.style.top = '56px'
+
+    let markComplete = document.querySelector('.mark-completed .nav-label')
+    markComplete.style.top = '3px'
+    markComplete.style.right = '58px'
+
+    let navLabelRight = document.querySelector('.guide-nav-right .nav-label')
+    navLabelRight.style.top = '56px'
 }
