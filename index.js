@@ -1,20 +1,20 @@
-console.log('It works!')
+// console.log('it loaded')
 
 if (document.querySelector('video')) {
     addVideoControls()
 } else {
-    console.log('No Video')
+    // console.log('No Video')
 }
 
 function addVideoControls() {
     const videoDiv = document.querySelector('.guide-video')
     document.addEventListener('keydown', (event) => {
-        console.log(event.key);
+        // console.log(event.key);
         if (event.key === 'd') {
-            console.log('Expand Left')
+            // console.log('Expand Left')
             videoDiv.style.marginLeft = '-100px'
         } else if (event.key === 's') {
-            console.log('Expand Right')
+            // console.log('Expand Right')
             videoDiv.style.marginRight = '-100px'
         }
     })
@@ -77,14 +77,19 @@ function createVideoControlButtons(videoDiv) {
         button.style = cssStyle
         button.addEventListener('click', (event) => {
             if (event.target.id == 'expand-video') {
-            console.log('expand video')
-            videoDiv.style.marginLeft = '-100px'
-            videoDiv.style.marginRight = '-100px'
+            // console.log('expand video')
+            videoDiv.style.marginLeft = '-130px'
+            videoDiv.style.marginRight = '-128px'
             } else if (event.target.id == 'shrink-video') {
-            console.log('shrink video')
+            // console.log('shrink video')
             videoDiv.style.marginLeft = '0'
             videoDiv.style.marginRight = '0'
             }
         } )
     })
+
+    // let showHide = document.querySelector('.my-expand-control')
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     // add functionality here
+    // })
 }

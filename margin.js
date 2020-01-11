@@ -1,21 +1,21 @@
-console.log('It works!')
+// console.log('It works!')
 
 if (document.querySelector('video')) {
     addMarginControls()
 } else {
-    console.log('No Video')
+    // console.log('No Video')
 }
 
 function addMarginControls() {
     
     const expandDiv = document.querySelector('.content-container')
     document.addEventListener('keydown', (event) => {
-        console.log(event.key);
+        // console.log(event.key);
         if (event.key === 'e') {
-            console.log('Expand Left')
+            // console.log('Expand Left')
             expandDiv.style.marginLeft = '-34px'
         } else if (event.key === 'c') {
-            console.log('Expand Right')
+            // console.log('Expand Right')
             expandDiv.style.marginRight = '-34px'
             
         }
@@ -65,11 +65,11 @@ function createMarginControlButtons(expandDiv) {
         button.style = cssBtnStyle
         button.addEventListener('click', (event) => {
             if (event.target.id == 'expand-div') {
-            console.log('expand div')
+            // console.log('expand div')
             expandDiv.style.marginLeft = '-35px'
             expandDiv.style.marginRight = '-35px'
             } else if (event.target.id == 'shrink-div') {
-            console.log('shrink div')
+            // console.log('shrink div')
             expandDiv.style.marginLeft = null
             expandDiv.style.marginRight = null
             }
